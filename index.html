@@ -9,6 +9,7 @@
 
     <body>
         <div id="clock-app">
+        <!-- ////////////////////////////////////// 00 : 00 : 00 ///////////////////////////////////////////-->
             <div id="time">
                 <img class="number" id="10" src="media/images/digit-0.png">
                     <img class="number" id="11" src="media/images/digit-0.png">
@@ -24,32 +25,58 @@
                     <img class="number" id="31" src="media/images/digit-0.png">
                     
                     <div class="am-pm" id="am-pm"></div>
-                    <!-- <script type="text/javascript" src="/scripts/time.js"></script> -->
+                    <script type="text/javascript" src="scripts/time.js"></script>
             </div>
 
+        <!-- ///////////////////////////////////// 12 FEBRUARY 2025 /////////////////////////////////////// -->
             <div id="date">
                 <p id="date-content">12 February 2025</p>
-                <!-- <script type="text/javascript" src="scripts/date.js"></script> -->
+                <script type="text/javascript" src="scripts/date.js"></script>
             </div>
 
+        <!-- ////////////////////////////////// NO ALARM SET /////////////////////////////////////////////////////////// -->
             <div id="alarm">
                 <div id="alarm-status">
-                    
+                    <h2 id="alarm-status-title">Alarm status</h2>
+                    <p2 id="alarm-status-info">No alarm set</p2>
                 </div>
 
+        <!-- /////////////////////////////// SET ALARM / STOP ALARM ////////////////////////////////////////// -->
                 <div id="options">
                     <div id="set-alarm">
-                        <button id="set-alarm-btn">Set Alarm</button>
-                    </div>
-    
-                    <!-- //// за избиране на аларма -->
-                    <div id="alarm-menu" style="display: none">
-    
+                        <button class="option" id="set-alarm-btn">Set Alarm</button>
+
+                    <!-- ///////////////////// ALARM MENU ///////////////////////////////////////////// -->
+                        <!-- //// за избиране на аларма -->
+                        <div id="alarm-menu">
+                            <label for="alarm-time">Time:</label>
+                            <input type="time" id="alarm-time"><br>
+        
+                            <label for="alarm-sound">Sound:</label>
+                            <select id="alarm-sound">
+                                <option value="media/audio/buzzer.wav">Buzzer</option>
+                                <option value="media/audio/digital-clock.wav">Digital Clock</option>
+                                <option value="media/audio/half-life-alarm-sound.mp3">Facility</option>
+                                <option value="media/audio/rooster.wav">Rooster</option>
+                            </select><br>
+        
+                            <label>
+                                <input type="checkbox" id="alarm-vibration">Vibration
+                            </label><br>
+                            <!-- /////////////////// BUTTONS ////////////////////////////// -->
+                            <div class="action-btns">
+                                <button class="action" id="close-btn">Close</button>
+                                <button class="action" id="save-btn">Save</button>
+                            </div>
+                        </div>
                     </div>
 
-                    <button id="stop-alarm-btn" style="display: none">Stop Alarm</button>
+                <!-- ////////////////////////////// STOP ALARM ///////////////////////////////////////////// -->
+                    <button class="option" id="stop-alarm-btn">Stop Alarm</button>
                 </div>
             </div>
+
+            <script type="text/javascript" src="scripts/alarm.js"></script>
         </div>
     </body>
 </html>
