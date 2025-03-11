@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clock</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+    </head>
+
+    <body>
+        <div id="clock-app">
+            <div id="time">
+                <img class="number" id="10" src="media/images/digit-0.png">
+                    <img class="number" id="11" src="media/images/digit-0.png">
+
+                    <img class="colon" id="colon1" src="media/images/colon.png">
+                    
+                    <img class="number" id="20" src="media/images/digit-0.png">
+                    <img class="number" id="21" src="media/images/digit-0.png">
+                    
+                    <img class="colon" id="colon2" src="media/images/colon.png">
+                    
+                    <img class="number" id="30" src="media/images/digit-0.png">
+                    <img class="number" id="31" src="media/images/digit-0.png">
+                    
+                    <div class="am-pm" id="am-pm"></div>
+                    <!-- <script type="text/javascript" src="/scripts/time.js"></script> -->
+            </div>
+
+            <div id="date">
+                <p id="date-content">12 February 2025</p>
+                <!-- <script type="text/javascript" src="scripts/date.js"></script> -->
+            </div>
+
+            <div id="alarm">
+                <div id="alarm-status">
+                    
+                </div>
+
+                <div id="options">
+                    <div id="set-alarm">
+                        <button id="set-alarm-btn">Set Alarm</button>
+                    </div>
+    
+                    <!-- //// за избиране на аларма -->
+                    <div id="alarm-menu" style="display: none">
+    
+                    </div>
+
+                    <button id="stop-alarm-btn" style="display: none">Stop Alarm</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
